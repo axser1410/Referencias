@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Repaso Termux</title>
+</head>
+<body>
+    <main>
+        <h1>Recopilacion</h1>
+        <section id="primera-seccion">
+            <h2>Termux</h2><br>
+            <h3>Instalacion de Termux</h3>
+            <p>Para instalar termux en un android es necesario instalarlo desde <a href="https://f-droid.org/packages/com.termux/">F-droid</a> (no instalarlo desde la Play Store).
+            Para instalarlo se debe dar los permisos correspondientes, y ya en la terminal de Termux se ejecuta los siguientes comandos:</p>
+            <p><strong>apt update:</strong> se utiliza para actualizar al lista de paquetes instalados.</p>
+            <p><strong>apt upgrade:</strong> se utiliza para actualizar los paquetes instalados</p>
+            <br>
+            <h3>Instalacion de la API de Termux</h3>
+            <p>se puede verificar las herramientas de termux escribiendo en la terminal <strong>termux</strong> y dando doble tabulador</p>
+            <p>para instalar la api de termux se ejecuta el comando <strong>pkg install termux-api</strong> y para que funcionen las herramientas instaladas de la API de Termux es necesario instalar <a href="https://f-droid.org/es/packages/com.termux.api/">API de Termux</a></p>
+        </section>
+        <section id="segunda_seccion">
+            <h3>control remoto con ssh</h3>
+            <p>instalacion del paquete con : "pkg install openssh"</p>
+            <p id="contraseña">despues de instalarlo para iniciar el ssh es recomendable agregar una contraseña con el comando: "passwd" (si no permite ejecutar el comando, se soluciona actualizando las librerias y paquetes con "apt update" y  "apt upgrade" posteriormente se vuelve a ejecutar "passwd")</p>
+  
+            <p>se ejecuta el comando sshd para iniciar el servidor ssh.(en caso de que no permita ejecutar el comando ejecutamos el comando "ssh-keygen -A" para generar las claves de los hosts)</p>
+            <p>para conectar desde la powerShell se utiliza el comando "ssh usuario@ip -p 8022" utilizando despues la clave que se genero  <a href="#contraseña">aqui</a></p>
+            <p>lista de comandos ejecutados en el Termux</p>
+            <ul>
+                <li>whoami(ver el usuario del equipo)</li>
+                <li>ifconfig(ver el ip del equipo)</li>
+            </ul>
+
+        </section>
+        <br><br><br><br><hr>
+        <section id="primera-react">
+            <h3>curso y comandos sobre react y vite</h3>
+            <p> Primero se crea el directorio de trabajo y estando ahi se abre la terminal en esa direccion.(se puede con <strong>Alt + Click Derecho</strong> y seleccionar <em>"abrir PowerShell aqui"</em> )</p>
+            <p>Los comandos en la terminal son </p>
+            <p><strong>npm create vite</strong></p>
+            <p>se registra el nombre del la carpeta del proyecto en el que se trabajara</p>
+            <p>con las flechas se elige react, posteriormente js</p>
+            <p>ya despues salir de la terminal y ejecutar los comandos que muestran en la terminal, que son</p>
+            <p><strong>npm install</strong></p>
+            <p><strong>npm run dev</strong></p>
+            <p>y ya esta creado y configurado el entorno de trabajo</p>
+
+            <br><br><br><br>
+            <p>Existe ena variedad de elementos en react como son los de teclado, raton etc. y esos estan en la siguiente pagina <a href="https://es.legacy.reactjs.org/docs/events.html">synthatic events</a></p>
+        </section>
+        <br><br><br><br><hr>
+        <section>
+            <h2><a href="https://getbootstrap.com/">Bootstrap</a></h2>
+            <h3>¿QUE ES BOOTSTRAP?</h3>
+            <p>Bootstrap es un framework que permite a los desarrolladores web construir páginas web responsives de una forma más rápida y sencilla. En este sentido, proporciona un conjunto de componentes y plantillas CSS, HTML y JavaScript que cualquiera puede utilizar o modificar de manera gratuita.</p>
+            <h3>INSTALACION</h3>
+            <p>Existen 2 opciones de instalacion o de agregar a los proyectos: <br>
+                1. Agregar las siguientes linaes de codigo. La referencia se encuentra en la pagina oficila de <a href="https://getbootstrap.com/docs/5.3/getting-started/download/">BOOTSTRAP</a> <br> <br>agregar lo siguiente en como un link de CSS <br> "href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"<br>  <br> <br>
+                Agregar lo siguiente como un script:src <br>
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" <br> <br>
+                2. Descargar el paquete de bootstrap de la pagina oficial o del siguiente  <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.1/bootstrap-5.3.1-dist.zip">enlace</a> y ya descargado y comprimido solo se debe llamar al archivo <em>"bootstrap.min.css"</em> para enlazar y hacer funcionar el css, y el archivo <em>"bootstrap.bundle.min.js"</em> para enlazar el script que hara funcionar el javascript
+            </p>
+            <p>se puede ver distintos trabajosdhechos con bootstrap <a href="https://expo.getbootstrap.com/" target="_blank">aqui</a></p> y de javascript <a href="https://codepen.io/" target="_blank">aqui</a>
+        </section>
+        <br><hr><br><br><br>
+
+        <section>
+            <br>
+            
+        </section>
+    </main>
+    
+</body>
+</html>
