@@ -27,16 +27,25 @@
         </section>
         <section id="segunda_seccion">
             <h3>control remoto con ssh</h3>
-            <p>instalacion del paquete con : "pkg install openssh"</p>
+            <p>en el dispositivo objetivo se hara la instalacion del paquete con : "pkg install openssh"</p>
             <p id="contraseña">despues de instalarlo para iniciar el ssh es recomendable agregar una contraseña con el comando: "passwd" (si no permite ejecutar el comando, se soluciona actualizando las librerias y paquetes con "apt update" y  "apt upgrade" posteriormente se vuelve a ejecutar "passwd")</p>
   
-            <p>se ejecuta el comando sshd para iniciar el servidor ssh.(en caso de que no permita ejecutar el comando ejecutamos el comando "ssh-keygen -A" para generar las claves de los hosts)</p>
-            <p>para conectar desde la powerShell se utiliza el comando "ssh usuario@ip -p 8022" utilizando despues la clave que se genero  <a href="#contraseña">aqui</a></p>
+            <p>En la maquina que tomara el control se ejecuta el comando sshd para iniciar el servidor ssh.(en caso de que no permita ejecutar el comando ejecutamos el comando "ssh-keygen -A" para generar las claves de los hosts)</p>
+            <p>para conectar desde la powerShell se utiliza el comando "ssh usuario@ip -p 8022" utilizando despues la clave que se genero  <a href="#contraseña">aqui</a> <br>Por ejemplo : <br>ssh au_4545@192.1.1.1. -p 8022 </p>
             <p>lista de comandos ejecutados en el Termux</p>
             <ul>
                 <li>whoami(ver el usuario del equipo)</li>
                 <li>ifconfig(ver el ip del equipo)</li>
             </ul>
+            <h3>Servicios en internet</h3>
+            <p><strong>NGROK:</strong> instalacion de ngrok </p>
+            <p><strong>PYTHON:</strong> instalacion de python </p>
+            <ol>
+                <li>python3 -m http.server <br>el comando incia un servidor web en el directori actual (se puede agregar un puerto de la forma python3 -m http.server 8050 )en la red Lan</li>
+                <li>ngrok http 3120 <br> ejecuta ngrok en escucha del puerto especificado (al seleccionar el puerto ejecutado de http.server subira a red todo el contiendio de la carpeta) en caso de tener un directorio con archivos .html .js .css ejecuta la pagina</li>
+
+            </ol>
+            <p>se puede compartir el acceso en una determinada red lan con el 1er comando, en un arbol de directorios</p>
 
         </section>
         <br><br><br><br><hr>
@@ -67,13 +76,42 @@
                 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" <br> <br>
                 2. Descargar el paquete de bootstrap de la pagina oficial o del siguiente  <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.1/bootstrap-5.3.1-dist.zip">enlace</a> y ya descargado y comprimido solo se debe llamar al archivo <em>"bootstrap.min.css"</em> para enlazar y hacer funcionar el css, y el archivo <em>"bootstrap.bundle.min.js"</em> para enlazar el script que hara funcionar el javascript
             </p>
-            <p>se puede ver distintos trabajosdhechos con bootstrap <a href="https://expo.getbootstrap.com/" target="_blank">aqui</a></p> y de javascript <a href="https://codepen.io/" target="_blank">aqui</a>
+            <p>se puede ver distintos trabajos hechos con bootstrap <a href="https://expo.getbootstrap.com/" target="_blank">aqui</a></p> y de javascript <a href="https://codepen.io/" target="_blank">aqui</a>
         </section>
         <br><hr><br><br><br>
 
         <section>
             <br>
+            <h2>PYTHON</h2>
             
+        </section>
+        <br><br><br><br><hr>
+        <section>
+            <h2>KALI LINUX</h2>
+            <h3>VirtualBox</h3>
+            <h4>Errores Frecuentes</h4>
+            <ul>
+                <li><h5>Tengo Windows 11 <a href="http://youtu.be/_syxEgPu6rs" target="_blank">¿Cómo puedo descargar Kali Linux?</a></h5>
+                </li>
+                <li><h5>Tengo Mac <a href="https://youtu.be/PV4vdpJa3zM" target="_blank">¿Cómo puedo descargar Kali Linux?</a></h5>
+                </li>
+                <li><h5>Como puedo activar la Virtualizacion en Windows <a href="https://www.youtube.com/watch?v=Tl4kODRGtIc&ab_channel=LuisOvalle" target="_blank">Virtualizacion YT</a></h5>
+                </li>
+                <li><h5>Tengo problemas con el Paquete redistribuible Microsoft Visual C++ a la hora de instalar Virtual Box <a href="https://www.youtube.com/watch?v=lwwriSry1ec&ab_channel=ZeroGamer" target="_blank">Solucion</a></h5>
+                </li>
+                <li><h5>Error al iniciar la maquina virtual <br>Not in a hypervisor partition (HVP=0) (VERR_NEM_NOT_AVAILABLE). <br>VT-x is disabled in the BIOS for all CPU modes (VERR_VMX_MSR_ALL_VMX_DISABLED). <br> Código resultado: E_FAIL (0x80004005)Componente: ConsoleWrapInterfaz: IConsole {872da645-4a9b-1727-bee2-5585105b9eed} <a href="https://www.youtube.com/watch?v=UmTSnBfRXrA&ab_channel=SalRodriguez" target="_blank">Solucion</a></h5>
+                </li>
+                <li><h5>Al crear una maquina virtual no me aparece la opcion de 64 Bits <a href="https://www.youtube.com/watch?v=TgHvowNwoVE&ab_channel=TheFlacee" target="_blank">Solucion</a></h5>
+                </li>
+                <li><h5>Error al Instalar Kali Linux en el paso "select and install software" <br> Prueba desactivando algunas herramientas y volviendolo a instalar.</h5>
+                </li>
+                <li><h5>Como puedo configurar la Salida de Audio en VirtualBox<a href="https://www.youtube.com/watch?v=lwwriSry1ec&ab_channel=ZeroGamer" target="_blank">Solucion</a></h5>
+                </li>
+                <li><h5>Al crear una maquina virtual no me aparece la opcion de 64 Bits <a href="https://www.youtube.com/watch?v=k0DOWjla3Xc&ab_channel=computadorastiolne" target="_blank">Solucion</a></h5>
+                </li>
+            </ul>
+            
+
         </section>
     </main>
     
